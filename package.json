@@ -1,0 +1,19 @@
+{
+  "name": "guada-by-night",
+  "version": "1.0.0",
+  "description": "Event aggregator",
+  "main": "server.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maur1th/guada-by-night.git"
+  },
+  "author": "Thomas Maurin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maur1th/guada-by-night/issues"
+  },
+  "homepage": "https://github.com/maur1th/guada-by-night#readme"
+}
