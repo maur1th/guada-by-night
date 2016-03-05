@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/maur1th/guada-by-night/issues"
   },
-  "homepage": "https://github.com/maur1th/guada-by-night#readme"
+  "homepage": "https://github.com/maur1th/guada-by-night#readme",
+  "dependencies": {
+    "bluebird": "^3.3.3",
+    "express": "^4.13.4",
+    "moment-timezone": "^0.5.1",
+    "mongoose": "^4.4.6",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
 }
