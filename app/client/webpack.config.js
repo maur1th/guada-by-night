@@ -9,9 +9,10 @@ module.exports = {
     loaders: [
       { loader: 'babel-loader', exclude: /node_modules/ },
       { loader: 'eslint-loader', exclude: /node_modules/ },
+      { loader: 'json-loader', include: /\.json$/ },
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.json', '.js', '.jsx'],
   },
 }

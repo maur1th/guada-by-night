@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import moment from 'moment-timezone'
 
 export default React.createClass({
   loadEventsFromServer() {
@@ -9,7 +10,7 @@ export default React.createClass({
   renderRow({ _id, date, title, tags }) {
     return (
       <tr key={_id}>
-        <td>{date}</td>
+        <td>{moment(date).format('YYYY-MM-DD HH:mm')}</td>
         <td>{title}</td>
         <td>{tags}</td>
       </tr>
@@ -23,18 +24,21 @@ export default React.createClass({
   },
   render() {
     return (
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Title</th>
-            <th>Tags</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.state.events.map( evt => this.renderRow(evt) )}
-        </tbody>
-      </table>
+      <div>
+        <h1>All events in Guada</h1>
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.events.map( evt => this.renderRow(evt) )}
+          </tbody>
+        </table>
+      </div>
     )
   }
 })
