@@ -10,7 +10,7 @@ export default React.createClass({
   renderRow({ _id, date, title, tags }) {
     return (
       <tr key={_id}>
-        <td>{moment(date).format('YYYY-MM-DD HH:mm')}</td>
+        <td>{moment(date).format('dddd MMMM Do YYYY, HH:mm')}</td>
         <td>{title}</td>
         <td>{tags}</td>
       </tr>
@@ -29,9 +29,9 @@ export default React.createClass({
         <table className="table table-hover">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Title</th>
-              <th>Tags</th>
+              <th className="col-md-4">Date</th>
+              <th className="col-md-4">Title</th>
+              <th className="col-md-4">Tags</th>
             </tr>
           </thead>
           <tbody>

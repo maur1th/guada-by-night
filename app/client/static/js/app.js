@@ -21667,7 +21667,7 @@
 	      _react2.default.createElement(
 	        'td',
 	        null,
-	        (0, _momentTimezone2.default)(date).format('YYYY-MM-DD HH:mm')
+	        (0, _momentTimezone2.default)(date).format('dddd MMMM Do YYYY, HH:mm')
 	      ),
 	      _react2.default.createElement(
 	        'td',
@@ -21709,17 +21709,17 @@
 	            null,
 	            _react2.default.createElement(
 	              'th',
-	              null,
+	              { className: 'col-md-4' },
 	              'Date'
 	            ),
 	            _react2.default.createElement(
 	              'th',
-	              null,
+	              { className: 'col-md-4' },
 	              'Title'
 	            ),
 	            _react2.default.createElement(
 	              'th',
-	              null,
+	              { className: 'col-md-4' },
 	              'Tags'
 	            )
 	          )
