@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import EventList from './components/event-list'
+import { Router, browserHistory } from 'react-router'
+
+import routes from './routes'
 
 ReactDOM.render(
   <div className="row">
     <div className="col-md-1"></div>
     <div className="col-md-10">
-      <EventList />
+      <Router history={browserHistory} routes={routes} />
     </div>
-  </div>,
-  document.getElementById('content')
+  </div>
+  , document.getElementById('content')
 )
