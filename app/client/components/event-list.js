@@ -24,21 +24,18 @@ export default React.createClass({
   },
   render() {
     return (
-      <div>
-        <h1>All events in Guada</h1>
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              <th className="col-md-4">Date</th>
-              <th className="col-md-4">Title</th>
-              <th className="col-md-4">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.events.map( evt => this.renderRow(evt) )}
-          </tbody>
-        </table>
-      </div>
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            <th className="col-md-4">Date</th>
+            <th className="col-md-4">Title</th>
+            <th className="col-md-4">Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.events.map( evt => this.renderRow(evt) )}
+        </tbody>
+      </table>
     )
   }
 })

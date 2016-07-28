@@ -1,11 +1,10 @@
 import React from 'react'
 import EventList from './event-list'
 
-export default function Admin () {
+export default function Home() {
   return (
     <div>
-      <h1>Manage events</h1>
-      // TODO: Add link to create new event
+      <h1>All events in Guada</h1>
       <EventList />
     </div>
   )

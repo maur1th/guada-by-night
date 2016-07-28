@@ -27450,9 +27450,9 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _eventList = __webpack_require__(/*! ./components/event-list */ 237);
+	var _home = __webpack_require__(/*! ./components/home */ 368);
 	
-	var _eventList2 = _interopRequireDefault(_eventList);
+	var _home2 = _interopRequireDefault(_home);
 	
 	var _admin = __webpack_require__(/*! ./components/admin */ 367);
 	
@@ -27463,7 +27463,7 @@
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _app2.default },
-	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _eventList2.default }),
+	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: 'admin', component: _admin2.default })
 	);
 
@@ -27573,46 +27573,37 @@
 	    var _this2 = this;
 	
 	    return _react2.default.createElement(
-	      'div',
-	      null,
+	      'table',
+	      { className: 'table table-hover' },
 	      _react2.default.createElement(
-	        'h1',
+	        'thead',
 	        null,
-	        'All events in Guada'
-	      ),
-	      _react2.default.createElement(
-	        'table',
-	        { className: 'table table-hover' },
 	        _react2.default.createElement(
-	          'thead',
+	          'tr',
 	          null,
 	          _react2.default.createElement(
-	            'tr',
-	            null,
-	            _react2.default.createElement(
-	              'th',
-	              { className: 'col-md-4' },
-	              'Date'
-	            ),
-	            _react2.default.createElement(
-	              'th',
-	              { className: 'col-md-4' },
-	              'Title'
-	            ),
-	            _react2.default.createElement(
-	              'th',
-	              { className: 'col-md-4' },
-	              'Tags'
-	            )
+	            'th',
+	            { className: 'col-md-4' },
+	            'Date'
+	          ),
+	          _react2.default.createElement(
+	            'th',
+	            { className: 'col-md-4' },
+	            'Title'
+	          ),
+	          _react2.default.createElement(
+	            'th',
+	            { className: 'col-md-4' },
+	            'Tags'
 	          )
-	        ),
-	        _react2.default.createElement(
-	          'tbody',
-	          null,
-	          this.state.events.map(function (evt) {
-	            return _this2.renderRow(evt);
-	          })
 	        )
+	      ),
+	      _react2.default.createElement(
+	        'tbody',
+	        null,
+	        this.state.events.map(function (evt) {
+	          return _this2.renderRow(evt);
+	        })
 	      )
 	    );
 	  }
@@ -44617,23 +44608,68 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.default = Admin;
 	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _eventList = __webpack_require__(/*! ./event-list */ 237);
+	
+	var _eventList2 = _interopRequireDefault(_eventList);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = _react2.default.createClass({
-	  displayName: 'admin',
-	  render: function render() {
-	    return _react2.default.createElement(
+	function Admin() {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
 	      'h1',
 	      null,
-	      'This is the administration page'
-	    );
-	  }
+	      'Manage events'
+	    ),
+	    '// TODO: Add link to create new event',
+	    _react2.default.createElement(_eventList2.default, null)
+	  );
+	}
+
+/***/ },
+/* 368 */
+/*!****************************!*\
+  !*** ./components/home.js ***!
+  \****************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
+	exports.default = Home;
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _eventList = __webpack_require__(/*! ./event-list */ 237);
+	
+	var _eventList2 = _interopRequireDefault(_eventList);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function Home() {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      'All events in Guada'
+	    ),
+	    _react2.default.createElement(_eventList2.default, null)
+	  );
+	}
 
 /***/ }
 /******/ ]);
