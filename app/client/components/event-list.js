@@ -24,12 +24,12 @@ export default React.createClass({
   },
   render() {
     return (
-      <table className="table table-hover">
+      <table className='table table-hover'>
         <thead>
           <tr>
-            <th className="col-md-4">Date</th>
-            <th className="col-md-4">Title</th>
-            <th className="col-md-4">Tags</th>
+            <th className='col-md-4'>Date</th>
+            <th className='col-md-4'>Title</th>
+            <th className='col-md-4'>Tags</th>
           </tr>
         </thead>
         <tbody>
